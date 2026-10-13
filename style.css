@@ -1,0 +1,535 @@
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base page typography and reset */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Sticky top navigation and link states */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 72px;
+  background: #081422f2;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #edf2f7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #f3c623;
+}
+
+/* Hero banner background, overlay, and title content */
+.cover {
+  background-image: url(pillarBackground.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: center var(--parallax-offset, 0px);
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cover::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.35));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  color: #fff;
+  max-width: 700px;
+  padding: 20px;
+  opacity: 1;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: "Sedan SC", serif;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-family: "Luckiest Guy", cursive;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.tagline {
+  margin: 16px 0 28px;
+  max-width: 560px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Sedan SC", serif;
+}
+
+.cta {
+  display: inline-block;
+  background: #f3c623;
+  color: #111;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+/* Shared slide layout backgrounds and spacing */
+
+/* Slide 1: Origins section and portrait frames */
+.slide1 {
+  background-color: #0b7189;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.origins-section {
+  display: grid;
+  grid-template-columns: minmax(130px, 220px) minmax(320px, 720px) minmax(130px, 220px);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 64px);
+  box-sizing: border-box;
+}
+
+.portrait-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  background: rgba(8, 20, 34, 0.2);
+  box-shadow: 0 18px 40px rgba(24, 20, 55, 0.24);
+}
+
+.portrait-frame img,
+.myths-image-frame img,
+.modern-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.origins-box {
+  min-height: 360px;
+  padding: clamp(28px, 5vw, 64px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background: rgba(8, 20, 34, 0.82);
+  border: 3px solid rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(24, 20, 55, 0.3);
+}
+
+.origins-box .eyebrow {
+  margin-bottom: 14px;
+}
+
+.origins-box h2 {
+  margin: 0 0 20px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.origins-box p:last-child {
+  max-width: 58ch;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Slide 2: Myths image-and-copy layout */
+.slide2 {
+  background-color: #228cdb;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.myths-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.myths-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.15fr) minmax(280px, 0.85fr);
+  width: min(1120px, 100%);
+  min-height: 460px;
+  box-shadow: 0 18px 40px rgba(24, 20, 55, 0.28);
+}
+
+.myths-image-frame {
+  min-height: 460px;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  background: rgba(8, 20, 34, 0.2);
+}
+
+.myths-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(32px, 6vw, 72px);
+  color: #fff;
+  background: #17202b;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0 8px 8px 0;
+}
+
+.myths-copy h2 {
+  margin: 0 0 20px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.myths-copy p:last-child {
+  max-width: 42ch;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Slide 3: Pantheons background */
+.slide3 {
+  background-color: #9c95dc;
+  padding: 20px;
+  min-height: 600px;
+}
+
+/* Slide 4: Modern depictions background and layout */
+.slide4 {
+  background-color: #c19ab7;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.modern-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.modern-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(480px, 1.3fr);
+  gap: clamp(28px, 6vw, 84px);
+  align-items: center;
+  width: min(1120px, 100%);
+}
+
+.modern-heading {
+  color: #17202b;
+}
+
+.modern-heading h2 {
+  margin: 0 0 24px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.88;
+}
+
+.modern-heading p:last-child {
+  max-width: 28ch;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.modern-gallery {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+  min-height: 460px;
+}
+
+.modern-image-frame {
+  overflow: hidden;
+  border: 3px solid #17202b;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 32px rgba(24, 20, 55, 0.2);
+}
+
+.modern-image-large {
+  grid-row: 1 / -1;
+  border-radius: 8px 0 0 8px;
+}
+
+.modern-image-small {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Responsive layouts for tablet and mobile screens */
+@media (max-width: 760px) {
+  .main-nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    overflow-x: auto;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+  }
+
+  .origins-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .origins-box {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 300px;
+  }
+
+  .portrait-frame {
+    max-width: 150px;
+    justify-self: center;
+  }
+
+  .myths-layout {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .myths-image-frame {
+    min-height: 220px;
+    border-right: 3px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .myths-copy {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .modern-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .modern-heading h2 {
+    margin-bottom: 14px;
+  }
+
+  .modern-gallery {
+    min-height: 300px;
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .flip-card {
+    height: 440px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    height: 64px;
+    padding: 0 12px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+  }
+
+  .cover {
+    height: 520px;
+  }
+
+  .hero-content {
+    padding: 20px 16px;
+  }
+
+  .slide1,
+  .slide2,
+  .slide3,
+  .slide4 {
+    padding: 16px;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 360px;
+    height: 420px;
+  }
+
+  .flip-card-back {
+    padding: 24px;
+  }
+}
+
+/* Slide 3: Pantheon card layout and flip interaction */
+
+.pantheons-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.pantheon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.flip-card {
+  width: min(360px, 90vw);
+  height: 480px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  backface-visibility: hidden;
+  box-shadow: 0 18px 40px rgba(24, 20, 55, 0.3);
+}
+
+.flip-card-front {
+  background: #17202b;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(10, 12, 20, 0.9));
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.4rem;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px;
+  box-sizing: border-box;
+  color: #fff;
+  background: #263248;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h2 {
+  margin: 0 0 18px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.flip-card-back p:last-child {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
