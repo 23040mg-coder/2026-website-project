@@ -64,7 +64,7 @@ body {
 
 /* Hero banner background, overlay, and title content */
 .cover {
-  background-image: url(pillarBackground.jpg);
+  background-image: url("images/pillarBackground.jpg");
   height: 600px;
   background-size: cover;
   background-position: center var(--parallax-offset, 0px);
@@ -533,3 +533,4 @@ body {
 }
 
 
+/* Background patterns */
