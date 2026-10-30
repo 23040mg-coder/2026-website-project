@@ -49,6 +49,10 @@ body {
   gap: 28px;
 }
 
+.nav-links li::marker {
+  color: transparent;
+}
+
 .nav-links a {
   color: #edf2f7;
   text-decoration: none;
@@ -333,6 +337,71 @@ body {
   border-radius: 0 8px 8px 0;
 }
 
+/* Footer links and site identity */
+.site-footer {
+  padding: 36px 40px;
+  color: #edf2f7;
+  background: #081422;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-brand p {
+  margin: 8px 0 0;
+  color: rgba(237, 242, 247, 0.72);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-brand .footer-title {
+  margin: 0;
+  color: #fff;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-brand a {
+  color: #f3c623;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+}
+
+.footer-links a,
+.back-to-top {
+  color: #edf2f7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.back-to-top:hover,
+.footer-brand a:hover {
+  color: #f3c623;
+}
+
+.back-to-top {
+  white-space: nowrap;
+}
+
 /* Responsive layouts for tablet and mobile screens */
 @media (max-width: 760px) {
   .main-nav {
@@ -397,6 +466,16 @@ body {
   .flip-card {
     height: 440px;
   }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
@@ -436,6 +515,10 @@ body {
 
   .flip-card-back {
     padding: 24px;
+  }
+
+  .site-footer {
+    padding: 28px 20px;
   }
 }
 
@@ -531,6 +614,3 @@ body {
   font-size: 0.9rem;
   line-height: 1.6;
 }
-
-
-/* Background patterns */

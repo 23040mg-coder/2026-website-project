@@ -1,27 +1,26 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sedan+SC&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap" rel="stylesheet">
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sedan+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap" rel="stylesheet">
+
   </head>
   <body>
   <!-- Sticky navigation and in-page section links -->
-  <nav class="main-nav">
+  <nav class="main-nav" id="top">
     <div class="nav-brand"></div>
     <div class="nav-links">
-      <a href="#origin">Origins</a>
-      <a href="#myths">Myths</a>
-      <a href="#pantheons">Pantheons</a>
-      <a href="#modern-depictions">Modern depictions</a>
+      <li><a href="#origin">Origins</a></li>
+      <li><a href="#myths">Myths</a></li>
+      <li><a href="#pantheons">Pantheons</a></li>
+      <li><a href="#modern-depictions">Modern depictions</a></li>
     </div>
   </nav>
   
@@ -37,7 +36,7 @@
   <!-- Slide 1: Origins, with portrait images on both sides -->
   <section class="slide1 origins-section" id="origin">
     <div class="portrait-frame">
-      <img src="images/statue3.jpg" alt="Ancient Egyptian statue" />
+      <img src="images/statue3.jpg" alt="Ancient Egyptian statue">
     </div>
     <div class="origins-box">
       <p class="eyebrow">Where the stories began</p>
@@ -49,7 +48,7 @@
       </p>
     </div>
     <div class="portrait-frame">
-      <img src="images/statue1.jpg" alt="Weathered Buddha statue in a forest" />
+      <img src="images/statue1.jpg" alt="Weathered Buddha statue in a forest">
     </div>
   </section>
 
@@ -57,7 +56,7 @@
   <section class="slide2 myths-section" id="myths">
     <div class="myths-layout">
       <div class="myths-image-frame">
-        <img src="images/ruins1.jpg" alt="Ancient temple ruins beneath a blue sky" />
+        <img src="images/ruins1.jpg" alt="Ancient temple ruins beneath a blue sky">
       </div>
       <div class="myths-copy">
         <p class="eyebrow">Legends passed down</p>
@@ -78,7 +77,7 @@
       <div class="flip-card" tabindex="0">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="images/herculesGreek.jpg" alt="Hercules from Greek mythology" />
+            <img src="images/herculesGreek.jpg" alt="Hercules from Greek mythology">
             <div class="flip-card-label">Greek and Roman Pantheons</div>
           </div>
           <div class="flip-card-back">
@@ -96,7 +95,7 @@
       <div class="flip-card" tabindex="0">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="images/horusEgypt.jpg" alt="Horus from ancient Egyptian mythology" />
+            <img src="images/horusEgypt.jpg" alt="Horus from ancient Egyptian mythology">
             <div class="flip-card-label">Egyptian Pantheon</div>
           </div>
           <div class="flip-card-back">
@@ -114,7 +113,7 @@
       <div class="flip-card" tabindex="0">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="images/thorNorse.jpg" alt="Thor from Norse mythology" />
+            <img src="images/thorNorse.jpg" alt="Thor from Norse mythology">
             <div class="flip-card-label">Norse Pantheon</div>
           </div>
           <div class="flip-card-back">
@@ -135,7 +134,7 @@
     <div class="modern-layout">
       <div class="modern-heading">
         <p class="eyebrow">Myth in the present</p>
-        <h2>Modern<br />Depictions</h2>
+        <h2>Modern<br>Depictions</h2>
         <p>
           Today, myths continue to inspire stories, films, games, books, and art around the world. 
           Modern creators often reimagine ancient characters and legends, giving them new settings, personalities, and perspectives while keeping their original themes alive. 
@@ -144,19 +143,39 @@
       </div>
       <div class="modern-gallery">
         <div class="modern-image-frame modern-image-large">
-          <img src="images/statue2.jpg" alt="Contemporary public sculpture in Adelaide" />
+          <img src="images/statue2.jpg" alt="Contemporary public sculpture in Adelaide">
         </div>
-        <div class="modern-image-frame modern-image-small" aria-label="Modern depiction image space">
-          <img src="images/statue4.jpg" alt="Head of a female statue" />
+        <div class="modern-image-frame modern-image-small">
+          <img src="images/statue4.jpg" alt="Head of a female statue">
         </div>
-        <div class="modern-image-frame modern-image-small" aria-label="Modern depiction image space">
-          <img src="images/statue5.jpg" alt="A statue of two people/warriors" />
+        <div class="modern-image-frame modern-image-small">
+          <img src="images/statue5.jpg" alt="A statue of two people/warriors">
         </div>
       </div>
     </div>
   </section>
-  </body>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <p class="footer-title">Stories of the Gods</p>
+        <p>All images are sourced from <a href="https://pixabay.com/">pixabay.com</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#origin">Origins</a>
+          <a href="#myths">Myths</a>
+          <a href="#pantheons">Pantheons</a>
+          <a href="#modern-depictions">Modern depictions</a>
+      </nav>
+    </div>
+    <p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+  </footer>
   <script src="script.js"></script>
+  </body>
 </html>
-
-
